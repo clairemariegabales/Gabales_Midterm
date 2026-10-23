@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import cpuLogo from '@/assets/cpu_logo.jpg'
 
 const isMobileMenuOpen = ref(false)
 
@@ -14,42 +13,40 @@ const closeMobileMenu = () => {
 </script>
 
 <template>
-    <nav
-        class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-amber-500/20 shadow-xl text-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-amber-500/20 shadow-xl text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
 
-\                <div class="flex items-center space-x-3">
-                    <RouterLink to="/#hero" class="flex items-center space-x-3 group" @click="closeMobileMenu">
-                        <!-- CPU Logo Image imported from assets -->
-                        <img :src="cpuLogo" alt="Central Philippine University Logo"
+                <div class="flex items-center space-x-3">
+                    <a href="#hero" class="flex items-center space-x-3 group" @click="closeMobileMenu">
+                        <!-- Direct path to public/assets/cpu_logo.jpg -->
+                        <img src="/assets/cpu_logo.jpg" alt="Central Philippine University Logo"
                             class="w-12 h-12 object-contain rounded-full border-2 border-amber-500/30 group-hover:scale-105 transition-transform duration-300" />
                         <div class="flex flex-col">
-                            <span
-                                class="font-extrabold text-lg tracking-wide text-white group-hover:text-amber-400 transition-colors">
+                            <span class="font-extrabold text-lg tracking-wide text-white group-hover:text-amber-400 transition-colors">
                                 CPU CCS
                             </span>
                             <span class="text-xs text-amber-400/90 font-medium tracking-wider">
                                 COLLEGE OF COMPUTER STUDIES
                             </span>
                         </div>
-                    </RouterLink>
+                    </a>
                 </div>
 
-                <!-- Navigation Links -->
+                <!-- Navigation Links using standard href for smooth scroll -->
                 <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
-                    <RouterLink to="/#hero"
+                    <a href="#hero"
                         class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:text-amber-400 hover:bg-slate-800/80 transition-all">
-                        Home</RouterLink>
-                    <RouterLink to="/#programs"
+                        Home</a>
+                    <a href="#programs"
                         class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:text-amber-400 hover:bg-slate-800/80 transition-all">
-                        Programs Offered</RouterLink>
-                    <RouterLink to="/#faculty"
+                        Programs Offered</a>
+                    <a href="#faculty"
                         class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:text-amber-400 hover:bg-slate-800/80 transition-all">
-                        Faculty & Staff</RouterLink>
-                    <RouterLink to="/#partnerships"
+                        Faculty & Staff</a>
+                    <a href="#partnerships"
                         class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:text-amber-400 hover:bg-slate-800/80 transition-all">
-                        Partnerships</RouterLink>
+                        Partnerships</a>
                 </div>
 
                 <!-- Mobile Menu Button -->

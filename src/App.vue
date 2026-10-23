@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- Navbar with CCS Logo and RouterLinks -->
+    <!-- Navbar with CCS Logo and Anchor Links -->
     <header class="navbar">
       <div class="nav-container">
         <div class="brand">
@@ -12,11 +12,12 @@
           </div>
         </div>
 
+        <!-- Changed RouterLinks to standard href anchor links -->
         <nav class="nav-links">
-          <RouterLink to="/#hero">Home</RouterLink>
-          <RouterLink to="/#programs">Programs Offered</RouterLink>
-          <RouterLink to="/#faculty">Faculty & Staff</RouterLink>
-          <RouterLink to="/#partnerships">Partnerships</RouterLink>
+          <a href="#hero">Home</a>
+          <a href="#programs">Programs Offered</a>
+          <a href="#faculty">Faculty & Staff</a>
+          <a href="#partnerships">Partnerships</a>
         </nav>
       </div>
     </header>
@@ -27,17 +28,18 @@
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <style>
+/* Fixed CSS selector typo from '-' to '*' */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Fallback smooth scrolling as noted in slide 5 */
+/* Fallback smooth scrolling */
 html {
   scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -133,23 +135,3 @@ body {
   }
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
